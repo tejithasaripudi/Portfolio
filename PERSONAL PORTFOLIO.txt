@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Page Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            margin-top: 60px;
+            display: none;
+            height: 100vh; /* Full viewport height */
+            box-sizing: border-box; /* Include padding in height calculation */
+        }
+
+        #home {
+            display: flex;
+            height: 100vh;
+        }
+
+        #home .left-section {
+            width: 60%;
+            background-color: #e3f2fd; /* Light Blue */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #home .right-section {
+            width: 30%;
+            background-color: #c8e6c9; /* Light Green */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #home img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        #about {
+            background-color: ##e8eaf6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        #about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        #projects {
+            background-color: #ffe0b2;
+        }
+
+        #contact {
+            background-color: #8ec2da;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="left-section">
+            <img src="teju.jpg" alt="Home Image">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my skills, projects, and how to contact me all in one place.</p>
+        </div>
+        <div class="right-section">
+            <h2>About This Portfolio</h2>
+            <p>This portfolio showcases my work, education, and contact information. Navigate through the sections to learn more about me.</p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section-background">
+        <div>
+            <h2>About Me</h2>
+            <p>Hello! I'm Tejitha Saripudi, a B.Tech student at Vignan University. I have a passion for coding and building software solutions that solve real-world problems. I enjoy learning new technologies and applying them in my projects.</p>
+
+            <h3>Education</h3>
+            <ul>
+                <li>
+                    <strong>B.Tech in Computer Science and Engineering</strong><br>
+                    Vignan University, Expected Graduation: 2026
+                </li>
+                <li>
+                    <strong>Intermediate (10+2)</strong><br>
+                    Narayana Junior College, Board of Intermediate Education, Andhra Pradesh, Year of Completion: 2022<br>
+                    Percentage: 70%
+                </li>
+                <li>
+                    <strong>10th Class (Secondary School Certificate)</strong><br>
+                    Narayana E.M School, Board of Secondary Education, Andhra Pradesh, Year of Completion: 2020<br>
+                    CGPA: 9.8/10
+                </li>
+            </ul>
+
+            <h3>Skills</h3>
+            <ul>
+                <li>Programming Languages: Basics of C and Java</li>
+                <li>Web Development: HTML, CSS</li>
+                <li>Database Management: MySQL</li>
+            </ul>
+
+            <h3>Languages Known</h3>
+            <ul>
+                <li>English</li>
+                <li>Telugu</li>
+            </ul>
+
+            <h3>Hobbies</h3>
+            <ul>
+                <li>Coding and building personal projects</li>
+                <li>Listening to stories</li>
+                <li>Traveling and exploring new places</li>
+            </ul>
+
+            <h3>Achievements</h3>
+            <ul>
+                <li>Winner of Throw Ball Competition, 2024</li>
+                <li>Going to publish a research paper on "ML in Flipkart Review Sentiment Analysis" in 2025</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-background">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Flipkart Review Sentiment Analysis</strong>: Machine learning project to predict the value of the product.</li>
+            <li><strong>House Price Prediction</strong>: Application that helps estimate house prices based on market data.</li>
+            <li><strong>Prediction of Adult Income Based on Census Data</strong>: Predicting income based on demographic and socioeconomic features.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-background">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:tejithasaripudi@gmail.com">tejithasaripudi@gmail.com</a></p>
+        <p>Phone: (+91) 7671923830</p>
+        <p>Location: Pedakurapadu, Palanadu, India</p>
+        <p>GitHub: <a href="https://github.com/tejithasaripudi" target="_blank">https://github.com/tejithasaripudi</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tejitha-saripudi-28bb66295/" target="_blank">https://www.linkedin.com/in/tejitha-saripudi-28bb66295/</a></p>
+    </section>
+
+    <!-- JavaScript to handle section visibility -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the clicked section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
